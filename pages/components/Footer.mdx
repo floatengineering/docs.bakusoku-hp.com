@@ -1,0 +1,20 @@
+# Footer
+
+フッターセクションはウェブサイトの下部に配置され、重要なリンク、著作権情報、およびその他の補足的な情報を提供します。
+
+![Footer](/footer.png)
+
+
+
+```js filename="layout.tsx"
+import Footer from "@/components/Footer";
+
+export default function Layout({ children }) {
+  return (
+    <>
+      {children}
+      <Footer />
+    </>
+  );
+}
+```

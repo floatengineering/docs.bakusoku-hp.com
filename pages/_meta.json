@@ -1,15 +1,17 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
+  "index": "チュートリアル",
+  "customize": "カスタマイズ",
+  "components": "コンポーネント",
+  "service": {
+    "title": "サービスページ ↗",
+    "type": "page",
+    "href": "https://bakusoku-hp.com",
+    "newWindow": true
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "お問い合わせ ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://x.com/bani24884",
     "newWindow": true
   }
 }

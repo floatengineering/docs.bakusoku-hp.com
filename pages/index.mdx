@@ -1,11 +1,90 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+# 爆速ホームページチュートリアル 👋
 
-## What is Nextra?
+ようこそ！このチュートリアルでは、爆速ホームページの設定と使用方法を説明します。以下の手順に従って、わずか数分でプロフェッショナルなウェブサイトを立ち上げましょう。
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+## レポジトリのクローンとセットアップ
 
-## Documentation
+1. ターミナルで以下のコマンドを実行してレポジトリをクローンし、必要なパッケージをインストールします：
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+```shell
+git clone https://github.com/floatengineering/bakusoku-hp.git [プロジェクト名]
+cd [プロジェクト名]
+npm install
+git remote remove origin
+```
+爆速ホームページには Node.js 18.17 以上が必要です。node -v コマンドでバージョンを確認してください。
+
+2. .env.example ファイルを .env.local にリネームします：
+
+```shell
+mv .env.example .env.local
+```
+
+## MicroCMSの登録とAPI設定
+
+1. MicroCMS公式サイトにアクセスし、「無料で始める」ボタンをクリックしてアカウントを作成します。
+2. ログイン後、新しいサービスを作成します：
+
+- 「サービスを作成」をクリック
+- サービス名を入力（例：「爆速ホームページ」）
+- サービスIDを入力（例：「bakusoku-hp」）
+
+
+3. APIの作成：
+
+- 左メニューの「コンテンツ」から「API」を選択
+- 「APIインポート」をクリック
+- クローンしたプロジェクト内の  フォルダにある JSON ファイルをアップロード
+- インポートが完了したら、各APIの設定を確認し、必要に応じて調整
+
+
+4. APIキーの取得：
+
+- 左メニューの「設定」から「API・アプリケーションキー」を選択
+- 「API KEY」をコピー
+
+
+5. .env.local ファイルを開き、以下の環境変数を設定します：
+```
+MICROCMS_API_KEY=あなたのAPIキー
+MICROCMS_SERVICE_DOMAIN=あなたのサービスID
+```
+6. コンテンツの追加：
+
+- 各APIの「コンテンツ」タブから「追加」をクリック
+- 必要な情報を入力し、コンテンツを保存
+
+## ローカルサーバーの起動
+
+1. 以下のコマンドを実行してローカルサーバーを起動します：
+
+```shell
+npm run dev
+```
+
+2. ブラウザで http://localhost:3000 を開いてサイトを確認します。
+
+## プロジェクト構造
+
+- /app → ページ（1フォルダ + page.tsx = 1ページ）
+- /components → Reactコンポーネント
+- /public → 静的ファイル（画像など）
+
+## config.js ファイル
+config.js ファイルでアプリの基本設定を行います。
+- appName: アプリの名前
+- appDescription: アプリの説明
+- domainName: ドメイン名
+- twitter: twitterのユーザー名
+- links: ヘッダーとフッターで表示するリンク
+- googleAnalyticsId: Google AnalyticsのID
+
+## デプロイ
+Vercel などのホスティングサービスを使用して、簡単にデプロイできます。GitHubリポジトリと連携させることで、継続的なデプロイが可能になります。
+
+## サポート
+
+問題や質問がある場合は、Issueを作成するか、サポートチームにお問い合わせください。
+
+これで爆速ホームページの基本的なセットアップと使用方法の説明は終わりです。爆速でウェブサイトを作成してください！
+

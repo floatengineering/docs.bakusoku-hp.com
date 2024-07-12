@@ -1,0 +1,21 @@
+# Profile
+
+特定の個人（通常は創業者や主要なチームメンバー）のプロフィールを表示するセクションです。
+
+![Profile](/profile.png)
+
+
+
+```js filename="page.tsx"
+import Profile from "@/components/Profile";
+
+export default function Home() {
+  return (
+    <main className="flex flex-col gap-16 lg:gap-24">
+      {/* ... 他のコンポーネント */}
+      <Profile />
+      {/* ... 他のコンポーネント */}
+    </main>
+  );
+}
+```

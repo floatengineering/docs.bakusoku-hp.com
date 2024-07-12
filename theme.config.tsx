@@ -2,16 +2,19 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>爆速ホームページのドキュメント</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/floatengineering/bakusoku-hp',
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/floatengineering/docs.bakusoku-hp.com',
   footer: {
-    text: 'Nextra Docs Template',
+    text: '爆速ホームページ',
+  },
+  editLink: {
+    component: null,
+  },
+  feedback: {
+    content: 'Issueを報告する'
   },
 }
 

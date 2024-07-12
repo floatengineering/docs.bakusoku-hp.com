@@ -1,0 +1,21 @@
+# Member
+
+チームメンバーの情報を表示するセクションで、各メンバーの写真、名前、役職、簡単な説明を含みます。
+
+![Member](/member.png)
+
+
+
+```js filename="page.tsx"
+import Member from "@/components/Member";
+
+export default function Home() {
+  return (
+    <main className="flex flex-col gap-16 lg:gap-24">
+      {/* ... 他のコンポーネント */}
+      <Member />
+      {/* ... 他のコンポーネント */}
+    </main>
+  );
+}
+```

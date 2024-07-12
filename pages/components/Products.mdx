@@ -1,0 +1,21 @@
+# Products
+
+製品やサービスの詳細情報を表示するセクションです。
+
+![Products](/products.png)
+
+
+
+```js filename="page.tsx"
+import Products from "@/components/Products";
+
+export default function Home() {
+  return (
+    <main className="flex flex-col gap-16 lg:gap-24">
+      {/* ... 他のコンポーネント */}
+      <Products />
+      {/* ... 他のコンポーネント */}
+    </main>
+  );
+}
+```
